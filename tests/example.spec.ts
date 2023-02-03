@@ -12,7 +12,7 @@ test('homepage has Playwright in title and get started link linking to the intro
   // Expect an attribute "to be strictly equal" to the value.
   await expect(getStarted).toHaveAttribute('href', '/docs/intro');
 
-  // Click the get started link.
+  // Click the get started link.-
   await getStarted.click();
 
   // Expects the URL to contain intro.
