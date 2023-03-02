@@ -1,5 +1,5 @@
 # Use the playwright image from Microsoft which has the browsers pre-installed
-FROM mcr.microsoft.com/playwright:v1.31.0-focal
+FROM mcr.microsoft.com/playwright:v1.31.1-focal
 
 ENV HOME=/usr/src/app
 
