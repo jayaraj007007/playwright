@@ -1,7 +1,7 @@
 # Use the playwright image from Microsoft which has the browsers pre-installed
 FROM mcr.microsoft.com/playwright:v1.31.1-focal
 
-ENV HOME=/usr/src/app
+ENV HOME=/app
 
 # Enable CI mode (used in the playwright.config.ts)
 ENV CI=true
