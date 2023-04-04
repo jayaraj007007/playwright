@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: BUILD_NAME
+  labels:
+    pod-name: BUILD_NAME
+spec:
+  containers:
+    - image: IMAGE_NAME
+      imagePullPolicy: IfNotPresent
+      name: BUILD_NAME
+      volumeMounts:
+        - name: shared-data
+          subPath: SUB_PATH
+          mountPath: /app/RESULT_FOLDER
+    - name: busybox
+      image: busybox
+      volumeMounts:
+      - name: shared-data
+        mountPath: /reports-dir
+      command: ["/bin/sh"]
+      args: ["-c", "sleep 3600"]
+  volumes:
+    - name: shared-data
+      emptyDir: {}
+  restartPolicy: Never
